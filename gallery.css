@@ -1,0 +1,138 @@
+
+  * {
+  /* Configuração universal para bordas e preenchimentos */
+  box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total dos elementos */
+  margin: 0; /* Remove margem padrão de todos os elementos */
+  padding: 0; /* Remove preenchimento padrão de todos os elementos */
+}
+
+
+
+.superior{
+    background-color:#f8e5e5;
+}
+
+
+/* Container da galeria, centraliza o conteúdo e adiciona espaçamento */
+.gallery {
+    padding: 5px 0; /* Espaçamento superior e inferior de 50px */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Permite o uso de posicionamento absoluto para elementos filhos */
+  }
+  
+  /* Estilização do título dentro da galeria */
+  .gallery h1 {
+    font-size: 3em; /* Define o tamanho da fonte como 3em */
+    margin-bottom: 30px; /* Espaçamento inferior de 30px */
+    color: var(--secondary-color); /* Cor do texto, definida por uma variável */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para o texto */
+    position: relative; /* Permite o uso de pseudoelementos com posicionamento absoluto */
+    display: inline-block; /* Faz com que o h1 ocupe apenas o espaço necessário */
+    letter-spacing: 2px; /* Espaçamento entre letras de 2px */
+  }
+  
+  /* Estilização dos pseudoelementos ::before e ::after do h1 */
+  .gallery h1::before,
+  .gallery h1::after {
+    content: ''; /* Cria conteúdo vazio para os pseudoelementos */
+    position: absolute; /* Posicionamento absoluto em relação ao h1 */
+    height: 2px; /* Altura da linha */
+    background: linear-gradient(to right, var(--border-color), var(--highlight-color), var(--border-color)); /* Gradiente para a linha */
+    top: 50%; /* Alinha verticalmente no meio do h1 */
+    width: 20px; /* Largura da linha */
+  }
+  
+  /* Estilização do pseudoelemento ::before do h1 */
+  .gallery h1::before {
+    right: 100%; /* Posiciona a linha à esquerda do h1 */
+    margin-right: 20px; /* Espaçamento entre o h1 e a linha */
+  }
+  
+  /* Estilização do pseudoelemento ::after do h1 */
+  .gallery h1::after {
+    left: 100%; /* Posiciona a linha à direita do h1 */
+    margin-left: 20px; /* Espaçamento entre o h1 e a linha */
+  }
+  
+  /* Container para os botões de filtro */
+  .filter-buttons {
+    margin-bottom: 40px; /* Espaçamento inferior de 40px */
+    display: flex; /* Exibe os botões em linha */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha se necessário */
+  }
+  
+  /* Estilização de cada botão de filtro */
+  .filter-button {
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color)); /* Gradiente de fundo para os botões */
+    color: var(--bg-color); /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 12px 25px; /* Espaçamento interno (12px vertical e 25px horizontal) */
+    margin: 0 10px 10px; /* Espaçamento externo (10px em todos os lados exceto superior) */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    transition: all 0.3s ease; /* Animação suave para todas as propriedades */
+    font-family: 'Cormorant Garamond', serif; /* Fonte personalizada */
+    font-size: 1.1em; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para o botão */
+  }
+  
+  /* Estilização adicional para botões ativos ou ao passar o mouse */
+  .filter-button:hover,
+  .filter-button.active {
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color)); /* Inverte o gradiente ao passar o mouse ou quando ativo */
+    transform: translateY(-3px); /* Move o botão 3px para cima */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse ou quando ativo */
+  }
+  
+  /* Estilização do grid da galeria */
+  .gallery-grid {
+    display: grid; /* Usa grid layout para a galeria */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Cria colunas flexíveis de no mínimo 280px */
+    gap: 30px; /* Espaçamento entre os itens do grid */
+    margin-top: 40px; /* Espaçamento superior de 40px */
+  }
+  
+  /* Estilização de cada item da galeria */
+  .gallery-item {
+    position: relative; /* Permite o uso de posicionamento absoluto para elementos filhos */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa as bordas */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra para os itens */
+    border: 4px solid var(--border-color); /* Borda de 4px com cor definida por variável */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para transformação e sombra */
+    cursor: pointer; /* Cursor de mão ao passar sobre o item */
+    aspect-ratio: 1 / 2; /* Proporção de aspecto 1:2 para o item */
+  }
+  
+  /* Estilos responsivos para telas maiores que 768px */
+  @media (min-width: 768px) {
+    /* Exibe os links de navegação em linha em telas maiores */
+    .nav-links {
+      display: flex;
+    }
+  
+    /* Esconde o ícone de menu tipo "burger" em telas maiores */
+    .burger {
+      display: none;
+    }
+  
+    /* Aumenta o tamanho da fonte do h1 em telas maiores */
+    .gallery h1 {
+      font-size: 3.5em;
+    }
+  
+    /* Aumenta o tamanho da fonte dos botões de filtro em telas maiores */
+    .filter-button {
+      font-size: 1.2em;
+    }
+  
+    /* Aumenta a largura mínima das colunas do grid em telas maiores */
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+  

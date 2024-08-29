@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta charset="UTF-8">
+    
+    <!-- Configura a página para se adaptar ao tamanho da tela do dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Descrição breve da página para motores de busca e redes sociais -->
+    <meta name="description" content="Carol Guimarães - Art Tattoo em Formosa-GO, oferecendo tatuagens personalizadas para clientes de Brasília, Sobradinho, Planaltina, Unaí-MG e entorno, com foco em traço fino, botânico, minimalista e lettering.">
+    
+    <!-- Palavras-chave relevantes para SEO -->
+    <meta name="keywords" content="tatuagem Brasília, tatuagem DF, arte tattoo Brasília, tatuagem Sobradinho, tatuagem Planaltina, tatuagem Unaí-MG, tatuagem entorno DF, traço fino, botânico, minimalista, lettering, Carol Guimarães, Formosa-GO, tatuagem Formosa-GO">
+    
+    <!-- Nome do autor da página -->
+    <meta name="author" content="Antonio Roseno de Sousa">
+    
+    <!-- Título da página para a Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Carol Guimarães - Art Tattoo">
+    
+    <!-- Descrição da página para a Open Graph -->
+    <meta property="og:description" content="Carol Guimarães - Art Tattoo em Formosa-GO, oferecendo tatuagens personalizadas para clientes de Brasília, Sobradinho, Planaltina, Unaí-MG e entorno, com foco em traço fino, botânico, minimalista e lettering.">
+    
+    <!-- Imagem de pré-visualização para a Open Graph -->
+    <meta property="og:image" content="URL da imagem de pré-visualização">
+    
+    <!-- URL da página para a Open Graph -->
+    <meta property="og:url" content="URL da página">
+    
+    <!-- Tipo de conteúdo para a Open Graph -->
+    <meta property="og:type" content="website">
+    
+    <!-- Tipo de cartão para Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Título da página para Twitter Cards -->
+    <meta name="twitter:title" content="Carol Guimarães - Art Tattoo">
+    
+    <!-- Descrição da página para Twitter Cards -->
+    <meta name="twitter:description" content="Carol Guimarães - Art Tattoo em Formosa-GO, oferecendo tatuagens personalizadas para clientes de Brasília, Sobradinho, Planaltina, Unaí-MG e entorno, com foco em traço fino, botânico, minimalista e lettering.">
+    
+    <!-- Imagem de pré-visualização para Twitter Cards -->
+    <meta name="twitter:image" content="URL da imagem de pré-visualização">
+    
+    <!-- Título da página exibido na aba do navegador e para motores de busca -->
+    <title>Carol Guimarães - Art Tattoo em Formosa-GO, Brasília e Entorno</title>
+    
+    <!-- Importa a fonte Cormorant Garamond do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Importa o estilo do Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <!-- Importa o arquivo de estilo personalizado -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+
+</head>
+
+
+<header>
+  <div class="container">
+    <!-- Navegação principal -->
+    <nav>
+      <!-- Logo do site -->
+      <div class="logo">
+        <img src="img/perfi1.jpg" alt="Carol Guimarães - Art Tattoo Logo">
+      </div>
+      <!-- Links de navegação -->
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="index.html">Serviços</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <!-- Menu hamburguer (para dispositivos móveis) -->
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Seção principal (Hero) -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <!-- Título e descrição principal -->
+    <h1>Carol Guimarães - Art Tattoo</h1>
+    <p>Transformando suas ideias em arte permanente na sua pele</p>
+    <!-- Botão de chamada para ação -->
+    <a href="contato.html" class="btn">Agende Sua Sessão</a>
+  </div>
+</section>
+
+
+<section class="gallery">
+  <div class="container-gallery">
+    <h1>Galeria de Arte em Pele</h1> <!-- Título da seção da galeria -->
+
+    <div class="filter-buttons">
+      <!-- Botões de filtro para a galeria -->
+      <button class="filter-button active" data-filter="all">Todos</button>
+      <button class="filter-button" data-filter="fineline">Traço Fino</button>
+      <button class="filter-button" data-filter="botanical">Botânico</button>
+      <button class="filter-button" data-filter="minimalist">Minimalista</button>
+      <button class="filter-button" data-filter="lettering">Lettering</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Itens da galeria -->
+
+      <!-- Repetição de itens da galeria com categorias diferentes -->
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos1.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos2.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos3.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos4.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos5.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos6.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos7.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos8.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos9.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos10.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos11.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos12.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos13.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos14.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos15.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos16.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos17.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos18.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos19.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category=" botanical">
+        <img src="img/Botânicos20.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos21.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos23.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos24.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos25.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+      <div class="gallery-item" data-category="botanical">
+        <img src="img/Botânicos26.webp" alt="Tatuagem de flores em traço fino">
+      </div>
+
+
+
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist1.webp" alt="tatuagem da constelação de virgem">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist2.webp" alt="Tatuagem de uma fenix">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist3.webp" alt="Tatuagem de uma kimono">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist4.webp" alt="Tatuagem de um altere de academia">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist5.webp" alt="Tatuagem do espaço, com um astronalta, jupiter, lua e estrelas">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist6.webp" alt="Tatuagem de uma borboleta fazendo uma matamofose em uma flor">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist7.webp" alt="Tatuagem de um tigre filhote dormindo">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist8.webp" alt="Tatuagemmde uma flor com a mensagem bença vó">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist9.webp" alt="Tatuagem uma mão de uma mae com dois filhos segurando seus dedos">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist10.webp" alt="Tatuagem retrato da mae e sua filha">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist11.webp" alt="Tatuagem sol com a lua dentro">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist12.webp" alt="Tatuagem duas andorinhas">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist13.webp" alt="Tatuagem do pombo de ouro do harry potter">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist14.webp" alt="Tatuagem duas carpas, com referencial ao ing">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist15.jpg" alt="Tatuagem minimalista de um flor">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist16.jpg" alt="Tatuagem da corroa de cristo">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist17.webp" alt="Tatuagem de uma aranha">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist18.webp" alt="Tatuagem uma jarra jorrando agua">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist19.webp" alt="Tatuagem de uma cachorro e gato com um coraçao no meio">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist20.jpg" alt="Tatuagem de um gato astronalta no espaço ouvindo musica>
+        </div>
+        <div class=" gallery-item" data-category="minimalist">
+        <img src="img/minimalist21.jpg" alt="Tatuagem de um perfume chique">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist22.jpg" alt="Tatuagem de uma cobra">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist23.jpg" alt="Tatuagem de fogo">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist24.jpg" alt="Tatuagem de duas patas de cachorro">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist25.jpg" alt="Tatuagem de uma flor">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist26.jpg" alt="Tatuagem para fazer com a amiga de duas vidas do marios brows">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist27.jpg" alt="Tatuagem minimalista de cuzcuzeira">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist28.jpg" alt="Tatuagem minimalista de uma abelha">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist29.jpg" alt="Tatuagem minimalista de uma liberula">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist30.jpg" alt="Tatuagem minimalista geométrica da lua e o sol">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist31.jpg" alt="Tatuagem minimalista de um pokemon e um fogo ">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist32.jpg" alt="Tatuagem minimalista do BMP personagem da hora da aventura e o Tony Tony Chopper
+          Personagem de One Piece
+           ">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist33.jpg" alt="Tatuagem minimalista de um brócolis com uma carinha de feliz">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist34.jpg" alt="Tatuagem minimalista fogo com carinha sorridente">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist35.jpg" alt="Tatuagem minimalista da Diane Nguyen
+          Personagem de BoJack Horseman">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist36.jpg" alt="Tatuagem minimalista do chapéu seletor do Harry Potter">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist37.jpg" alt="Tatuagem minimalista do trevo de 4 folhas">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist38.jpg" alt="Tatuagem minimalista de um fantasminha fofinho">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist39.jpg" alt="Tatuagem minimalista de uma Libélula">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist40.jpg" alt="Tatuagem minimalista do sol e a lua juntos ">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist41.jpg"
+          alt="Tatuagem minimalista uma rosa e um coraçao, tatuaagem para fazer com alguma pessoa,a miga">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist42.jpg" alt="Tatuagem minimalista da nossa senhora aparecida, tatuagem religiosa">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist43.jpg" alt="Tatuagem minimalista de um Dragão chines ">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist44.jpg" alt="Tatuagem minimalista de um pente com a base dele com black power">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist45.jpg" alt="Tatuagem minimalista um gato">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist46.jpg"
+          alt="Tatuagem minimalista all star azul da musica do Nando Reis e Cássia Eller ">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist47.jpg" alt="Tatuagem minimalista abelha rainha">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist48.jpg" alt="Tatuagem minimalista uma parte cobra outra borboleta">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist49.jpg" alt="Tatuagem minimalista da nossa senhora aparecida">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist50.jpg"
+          alt="Tatuagem minimalista um coraçao ligando o a mae e o pai como uma homanagem a eles.">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist51.jpg" alt="Tatuagem minimalista de uma abelha bem detalhada">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist52.jpg" alt="Tatuagem minimalista de um beija Flor">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist53.jpg"
+          alt="Tatuagem minimalista de duas linhas se encontrando e formando uma imagem de duas mulheres, que é a mae e sua filha">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist54.jpg" alt="Tatuagem minimalista de uma onça pintada, mas as pintas sao coraçoês">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist55.jpg"
+          alt="Tatuagem minimalista da nossa senhora dentro de um coraçao, com a ponta do coraçao como um terço que no final tem uma pomba da paz, representando o espirito santo">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist56.jpg" alt="Tatuagem minimalista beija flor">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist57.jpg" alt="Tatuagem minimalista de uma faca,adaga">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist58.jpg" alt="Tatuagem minimalista por do sol na praia">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist59.jpg" alt="Tatuagem minimalista garda chuva">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist60.jpg"
+          alt="Tatuagem minimalista de uma cobra que comeu o elefante, mas que parece um chapéu, um desenho do pequeno principe">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist61.jpg" alt="Tatuagem minimalista borboleta">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist62.jpg" alt="Tatuagem minimalista estrela">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist63.jpg"
+          alt="Tatuagem minimalista uma garota, com o dedo no nariz, dizendo nao estou reclamando, estou so falando ">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist64.jpg" alt="Tatuagem minimalista de um gato, um dinossauro e um cacto">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist65.jpg" alt="Tatuagem minimalista tatuagem Friends Ross I’m fine ">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist66.jpg" alt="Tatuagem minimalista de um violão">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist67.jpg"
+          alt="Tatuagem minimalista do Sport Club Corinthians Paulista com um coraçao no meio">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist68.jpg" alt="Tatuagem minimalista de um cafe e o livro">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist69.jpg" alt="Tatuagem minimalista equilibrio">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist70.jpg" alt="Tatuagem minimalista do sistema solar">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist71.jpg" alt="Tatuagem minimalista da justiça">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist72.jpg" alt="Tatuagem minimalista esqueleto da cabeça do boi">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist73.jpg"
+          alt="Tatuagem minimalista de um onça de costa olhando, com coraçoes no lugar das pintas">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist74.jpg" alt="Tatuagem minimalista do simbulo de libra, um carangueijo">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist75.jpg" alt="Tatuagem minimalista do Beach Tennis">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist76.jpg"
+          alt="Tatuagem minimalista do 9.3/4 do bombo de ouro, do chapeu seletor, das reliquias da mortes e da coruja do harry potter">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist77.jpg" alt="Tatuagem minimalista do Gato Jack">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist78.jpg" alt="Tatuagem minimalista signo de gemeos, uma borboleta de duas caras na asa">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist79.jpg" alt="Tatuagem minimalista de 4 boborletas">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist80.jpg" alt="atuagem minimalista de uma onça pintada deitada">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist81.jpg" alt="Tatuagem minimalista da alice no pais das maravilhas">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist82.jpg" alt="Tatuagem minimalista da constelaçao de virgem">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist83.jpg"
+          alt="Tatuagem minimalista de tres cachorros, 2 primeiros morreram e o ultimo vivo">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist84.jpg" alt="Tatuagem minimalista da raposa do pequeno principe">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist85.jpg" alt="Tatuagem minimalista de uma mae abraçando seu filho, com flores em volta">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist86.jpg" alt="Tatuagem minimalista de uma borboleta">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist88.jpg" alt="Tatuagem minimalista de um beija flor">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist89.jpg"
+          alt="Tatuagem minimalista de um balanço com o apoio das cordas sendo dois passárinhos">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist90.jpg" alt="Tatuagem minimalista de corrida, uma mulher correndo">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist91.jpg"
+          alt="Tatuagem minimalista um coraçao, anatomicamente correto, com a frase em cima dizendo amor">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist92.jpg" alt="Tatuagem minimalista um gato, desenhada com uma linha completa">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist93.jpg" alt="Tatuagem minimalista de irmaos, lisa enforcando o bart">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist94.jpg" alt="Tatuagem minimalista pokemons fazendo fusão">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist95.jpg"
+          alt="Tatuagem minimalista Rainha e o Rei do tabuleiro de xadrez repesentando a mae e o pai, com a data de nascimento">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist96.jpg" alt="Tatuagem minimalista de uma avó, vosinha, tricor">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist97.jpg" alt="Tatuagem minimalista de uma borboleta na nuca">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist98.jpg" alt="Tatuagem minimalista de uma rosa">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist99.jpg" alt="Tatuagem minimalista linda do doby do harry pootter">
+      </div>
+      <div class="gallery-item" data-category="minimalist">
+        <img src="img/minimalist100.jpg" alt="Tatuagem minimalista de uma flor, uma caveira, o toque de deus, um raio e uma mulher dentro 
+          ">
+      </div>
+
+      <!-- Lettering-->
+
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering1.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering2.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering3.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering4.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering5.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering6.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering7.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering8.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering9.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering10.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering11.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering12.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering13.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering14.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering15.webp" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering16.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering17.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering18.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering19.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering20.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering21.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering22.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering23.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering24.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering25.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering26.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering27.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+      <div class="gallery-item" data-category="lettering">
+        <img src="img/Lettering28.jpg" alt="Tatuagem de lettering delicado">
+      </div>
+
+
+      <!--Traço Fino -->
+
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino9.webp" alt="Tatuagem traço fino de UM CORAÇAO">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino10.webp" alt="Tatuagem traço fino de um coraçao nascendo uma flor">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino11.jpg" alt="Tatuagem traço fino de uma fenix">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino12.webp" alt="Tatuagem traço fino de constelação">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino13.webp" alt="Tatuagem traço fino de uma mulher com flores no cabelo">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino14.webp" alt="Tatuagem traço fino de uma leoa com seu filhote">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino15.jpg" alt="Tatuagem traço fino de uma mulher com coroa de flor">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino16.webp" alt="Tatuagem traço fino de uma pomba">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino17.jpg" alt="Tatuagem traço fino de viagens, cata vendo, bulsola">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino18.jpg" alt="Tatuagem traço fino de uma Bússola com suas pontas voltadas para viagens, de cada lado ">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino19.jpg" alt="Tatuagem traço fino de uma Deusa egipcia">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino20.jpg" alt="Tatuagem traço fino de um motor de um chevette">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino21.jpg" alt="Tatuagem traço fino de fases de lua">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino22.jpg" alt="Tatuagem traço fino de uma familia">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino23.jpg" alt="Tatuagem traço fino de uma taça de 1977">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino24.jpg" alt="Tatuagem traço fino de uma fenix">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino25.jpg" alt="Tatuagem traço fino de uma onça">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino26.jpg" alt="Tatuagem traço fino de nossa senhora aparecida">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino27.jpg" alt="Tatuagem traço fino de constelação">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino28.jpg" alt="Tatuagem traço fino de leão">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino29.jpg" alt="Tatuagem traço fino de um anjo">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino31.jpg" alt="Tatuagem traço fino de tribal">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino32.jpg" alt="Tatuagem traço fino da arvore da vida com simbolos nordicos">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino33.jpg" alt="Tatuagem traço fino de uma borboleta">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino34.jpg" alt="Tatuagem traço fino de um ramo">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino35.jpg" alt="Tatuagem traço fino de uma flor">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino36.jpg" alt="Tatuagem traço fino de alice no pais das maravilhas">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino37.jpg" alt="Tatuagem traço fino do pequeno principe">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino38.jpg" alt="Tatuagem traço fino de constelação">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino39.jpg" alt="Tatuagem traço fino de uma fenix">
+      </div>
+      <div class="gallery-item" data-category="fineline">
+        <img src="img/TraçoFino40.jpg" alt="Tatuagem traço fino de uma">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="img/perfi1.jpg" alt="Carol Guimarães - Art Tattoo Logo">
+      </div>
+      <div class="footer-social-links">
+        <!-- Link para o Instagram -->
+        <a href="https://www.instagram.com/carolguimaraes.tattoo" target="_blank" rel="noopener noreferrer"
+          class="footer-social-link">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+          <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram">
+        </a>
+        <!-- Link para o WhatsApp -->
+        <a href="https://wa.me/message/WNTNZP4JXPSGA1" target="_blank" rel="noopener noreferrer"
+          class="footer-social-link">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp</span>
+          <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inclusão do JavaScript -->
+<script src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', function () {
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Filtro de galeria
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Ajustar menu ao redimensionar a tela
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        nav.style.display = 'flex';
+      } else {
+        nav.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+
+</html>

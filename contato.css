@@ -1,0 +1,331 @@
+:root {
+        --primary-color: #f8e5e5;
+        --secondary-color: #3a3a3a;
+        --accent-color: #d4a5a5;
+        --text-color: #333;
+        --bg-color: #ffffff;
+        --border-color: #b68e8e;
+        --highlight-color: #f1d4d4;
+        --facebook-color: #1877F2;
+        --instagram-color: #E4405F;
+        --whatsapp-color: #25D366;
+}
+        * {
+            /* Garantir que todo o conteúdo seja dimensionado de acordo com as bordas e preenchimento, removendo margens e preenchimentos padrão */
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+          
+          body {
+            /* Estilos básicos do corpo, como fonte, cor do texto e fundo, incluindo uma imagem de fundo em SVG */
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M30,10 Q50,0 70,10 T90,30 Q100,50 90,70 T70,90 Q50,100 30,90 T10,70 Q0,50 10,30 T30,10' fill='none' stroke='%23b68e8e' stroke-width='0.5'/%3E%3C/svg%3E");
+            background-size: 100px 100px;
+          }
+          .superior{
+            background-color:#f8e5e5;
+        }
+            
+          .container {
+            /* Container principal centralizado com largura máxima e preenchimento, com elementos decorativos */
+          
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+          }
+          
+          .container::before,
+          .container::after {
+            /* Elementos decorativos posicionados no canto superior esquerdo e inferior direito do container */
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M20,10 Q40,0 60,10 T80,30 Q90,50 80,70 T60,90 Q40,100 20,90 T0,70 Q-10,50 0,30 T20,10' fill='none' stroke='%23d4a5a5' stroke-width='1'/%3E%3C/svg%3E");
+            opacity: 0.5;
+          }
+          
+          .container::before {
+            /* Posição do primeiro elemento decorativo */
+            top: -50px;
+            left: -50px;
+          }
+          
+          .container::after {
+            /* Posição e rotação do segundo elemento decorativo */
+            bottom: -50px;
+            right: -50px;
+            transform: rotate(180deg);
+          }
+          
+          header {
+            /* Estilo do cabeçalho, incluindo fundo, borda, sombra e posicionamento */
+            background: var(--primary-color);
+            padding: 20px 0;
+            border-bottom: 3px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+          }
+          
+          header::before,
+          header::after {
+            /* Gradiente decorativo nas bordas superior e inferior do cabeçalho */
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--border-color), var(--highlight-color), var(--border-color));
+          }
+          
+          header::before {
+            /* Posição do gradiente superior */
+            top: 0;
+          }
+          
+          header::after {
+            /* Posição do gradiente inferior */
+            bottom: 0;
+          
+            padding: 5px 0; /* Adiciona espaçamento entre os itens da lista */
+          }
+          nav {
+            /* Navegação flexível entre logo e links */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+          }
+          
+          .logo img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          
+          .nav-links {
+            /* Links de navegação, escondidos por padrão para dispositivos móveis */
+            display: none;
+            flex: 3; /* 30% da largura */
+            display: flex;
+            justify-content: center;
+            
+            
+            
+           
+          }
+          
+          .nav-links a {
+            /* Estilo dos links de navegação, incluindo cor, espaçamento, e efeitos de transição */
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-left: 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+            font-weight: 500;
+           align-items: center;
+           display: flex;
+            
+          }
+          
+          .nav-links a::before {
+            /* Linha decorativa abaixo dos links de navegação, visível ao passar o mouse */
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(to right, var(--accent-color), var(--highlight-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+          }
+          
+          .nav-links a:hover {
+            /* Efeitos ao passar o mouse nos links de navegação */
+          
+            color: var(--accent-color);
+            transform: translateY(-2px);
+          }
+          
+          .nav-links a:hover::before {
+            /* Animação da linha decorativa ao passar o mouse */
+            transform: scaleX(1);
+          }
+          
+          .burger {
+            /* Ícone de menu hamburguer para dispositivos móveis */
+            font-size: 2.2em;
+            cursor: pointer;
+            display: block;
+          }
+      .contact {
+        padding: 50px 0;
+        text-align: center;
+        position: relative;
+      }
+    
+      .contact h1 {
+        font-size: 3em;
+        margin-bottom: 30px;
+        color: var(--secondary-color);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
+        display: inline-block;
+        letter-spacing: 2px;
+      }
+    
+      .contact h1::before,
+      .contact h1::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background: linear-gradient(to right, var(--border-color), var(--highlight-color), var(--border-color));
+        top: 50%;
+        width: 120px;
+      }
+    
+      .contact h1::before {
+        right: 100%;
+        margin-right: 20px;
+      }
+    
+      .contact h1::after {
+        left: 100%;
+        margin-left: 20px;
+      }
+    
+      .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+    
+      .social-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
+        text-decoration: none;
+        color: var(--secondary-color);
+        transition: all 0.3s ease;
+      }
+    
+      .social-link:hover {
+        transform: translateY(-5px);
+      }
+    
+      .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        color: #ffffff;
+        font-size: 3em;
+        margin-bottom: 15px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+    
+      .social-icon::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: inherit;
+        filter: blur(10px);
+        opacity: 0.7;
+        z-index: -1;
+      }
+    
+      .social-icon.facebook {
+        background-color: var(--facebook-color);
+      }
+    
+      .social-icon.instagram {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      }
+    
+      .social-icon.whatsapp {
+        background-color: var(--whatsapp-color);
+      }
+    
+      .social-link:hover .social-icon {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+    
+      .social-name {
+        font-size: 1.3em;
+        font-weight: 500;
+        margin-top: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+    
+      footer {
+        background: linear-gradient(135deg, var(--secondary-color), var(--border-color));
+        color: var(--bg-color);
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 70px;
+        border-top: 3px solid var(--border-color);
+        position: relative;
+      }
+    
+      footer::before,
+      footer::after {
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M30,15 Q60,0 90,15 T120,45 Q135,75 120,105 T90,135 Q60,150 30,135 T0,105 Q-15,75 0,45 T30,15' fill='none' stroke='%23d4a5a5' stroke-width='1'/%3E%3C/svg%3E");
+        opacity: 0.3;
+      }
+    
+      footer::before {
+        top: -75px;
+        left: 50px;
+        transform: rotate(90deg);
+      }
+    
+      footer::after {
+        top: -75px;
+        right: 50px;
+        transform: rotate(-90deg);
+      }
+    
+      footer p {
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+    
+      @media (min-width: 768px) {
+        .nav-links {
+          display: flex;
+        }
+    
+        .burger {
+          display: none;
+        }
+    
+        .contact h1 {
+          font-size: 3.5em;
+        }
+      }

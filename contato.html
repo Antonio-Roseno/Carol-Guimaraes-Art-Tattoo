@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta charset="UTF-8">
+    
+    <!-- Configura a página para se adaptar ao tamanho da tela do dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Descrição breve da página para motores de busca e redes sociais -->
+    <meta name="description" content="Carol Guimarães - Art Tattoo em Formosa-GO, oferecendo tatuagens personalizadas para clientes de Brasília, Sobradinho, Planaltina, Unaí-MG e entorno, com foco em traço fino, botânico, minimalista e lettering.">
+    
+    <!-- Palavras-chave relevantes para SEO -->
+    <meta name="keywords" content="tatuagem Brasília, tatuagem DF, arte tattoo Brasília, tatuagem Sobradinho, tatuagem Planaltina, tatuagem Unaí-MG, tatuagem entorno DF, traço fino, botânico, minimalista, lettering, Carol Guimarães, Formosa-GO, tatuagem Formosa-GO">
+    
+    <!-- Nome do autor da página -->
+    <meta name="author" content="Antonio Roseno de Sousa">
+    
+    <!-- Título da página para a Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Carol Guimarães - Art Tattoo">
+    
+    <!-- Descrição da página para a Open Graph -->
+    <meta property="og:description" content="Carol Guimarães - Art Tattoo em Formosa-GO, oferecendo tatuagens personalizadas para clientes de Brasília, Sobradinho, Planaltina, Unaí-MG e entorno, com foco em traço fino, botânico, minimalista e lettering.">
+    
+    <!-- Imagem de pré-visualização para a Open Graph -->
+    <meta property="og:image" content="URL da imagem de pré-visualização">
+    
+    <!-- URL da página para a Open Graph -->
+    <meta property="og:url" content="URL da página">
+    
+    <!-- Tipo de conteúdo para a Open Graph -->
+    <meta property="og:type" content="website">
+    
+    <!-- Tipo de cartão para Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Título da página para Twitter Cards -->
+    <meta name="twitter:title" content="Carol Guimarães - Art Tattoo">
+    
+    <!-- Descrição da página para Twitter Cards -->
+    <meta name="twitter:description" content="Carol Guimarães - Art Tattoo em Formosa-GO, oferecendo tatuagens personalizadas para clientes de Brasília, Sobradinho, Planaltina, Unaí-MG e entorno, com foco em traço fino, botânico, minimalista e lettering.">
+    
+    <!-- Imagem de pré-visualização para Twitter Cards -->
+    <meta name="twitter:image" content="URL da imagem de pré-visualização">
+    
+    <!-- Título da página exibido na aba do navegador e para motores de busca -->
+    <title>Carol Guimarães - Art Tattoo em Formosa-GO, Brasília e Entorno</title>
+    
+    <!-- Importa a fonte Cormorant Garamond do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Importa o estilo do Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <!-- Importa o arquivo de estilo personalizado -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="contato.css">
+</head>
+
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="img/perfi1.jpg" alt="Carol Guimarães - Art Tattoo Logo"> <!-- Imagem do logo da empresa -->
+        </div>
+        <div class="nav-links">
+          <!-- Links de navegação -->
+          <a href="index.html">Início</a>
+          <a href="index.html">Serviços</a>
+          <a href="galeria.html">Galeria</a>
+        </div>
+        <div class="burger">
+          <!-- Ícone do menu hambúrguer para dispositivos móveis -->
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact">
+    <div class="container">
+      <h1>Entre em Contato</h1> <!-- Título da seção de contato -->
+      <div class="social-links">
+        <!-- Links para redes sociais -->
+        <a href="https://www.instagram.com/carolguimaraes.tattoo?igsh=cDFlamE0aGU2aDVu" target="_blank" rel="noopener noreferrer" class="social-link">
+          <div class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+
+          </div>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://wa.me/message/WNTNZP4JXPSGA1" target="_blank" rel="noopener noreferrer" class="social-link">
+          <div class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+
+          </div>
+          <span class="social-name">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Carol Guimarães - Art Tattoo. Todos os direitos reservados.</p> <!-- Informações de copyright -->
+    </div>
+  </footer>
+
+  <!-- Inclusão do JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const burger = document.querySelector('.burger'); // Seleciona o ícone do menu
+      const nav = document.querySelector('.nav-links'); // Seleciona o menu de navegação
+
+      // Função para alternar a visibilidade do menu ao clicar no ícone
+      burger.addEventListener('click', function() {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      });
+
+      // Ajustar menu ao redimensionar a tela
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          nav.style.display = 'flex'; // Exibe o menu como flexível em telas maiores
+        } else {
+          nav.style.display = 'none'; // Oculta o menu em telas menores
+        }
+      });
+
+      // Animação suave para os ícones sociais
+      const socialIcons = document.querySelectorAll('.social-icon');
+      socialIcons.forEach(icon => {
+        icon.addEventListener('mouseover', () => {
+          icon.style.transform = 'scale(1.1) rotate(5deg)'; // Amplia e rotaciona o ícone ao passar o mouse
+        });
+        icon.addEventListener('mouseout', () => {
+          icon.style.transform = 'scale(1) rotate(0deg)'; // Restaura o ícone ao remover o mouse
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

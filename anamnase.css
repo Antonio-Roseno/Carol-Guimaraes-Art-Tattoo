@@ -1,0 +1,194 @@
+/* Definição das cores usadas no tema */
+:root {
+    --primary-color: #f8e5e5; /* Cor primária (rosa claro) */
+    --secondary-color: #3a3a3a; /* Cor secundária (cinza escuro) */
+    --accent-color: #d4a5a5; /* Cor de destaque */
+    --text-color: #333; /* Cor do texto */
+    --bg-color: #ffffff; /* Cor de fundo */
+    --border-color: #b68e8e; /* Cor das bordas */
+    --highlight-color: #f1d4d4; /* Cor de realce */
+  }
+  
+  /* Estilo global para redefinir margens e preenchimento */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo do corpo da página */
+  body {
+    font-family: 'Cormorant Garamond', serif; /* Fonte usada */
+    line-height: 1.6;
+    color: var(--text-color); /* Cor do texto */
+    background-color: var(--bg-color); /* Cor de fundo */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M30,10 Q50,0 70,10 T90,30 Q100,50 90,70 T70,90 Q50,100 30,90 T10,70 Q0,50 10,30 T30,10' fill='none' stroke='%23b68e8e' stroke-width='0.5'/%3E%3C/svg%3E");
+    background-size: 100px 100px; /* Tamanho do padrão de fundo */
+  }
+  
+  /* Estilo do contêiner principal */
+  .container {
+    width: 90%;
+    max-width: 100px; /* Largura máxima do contêiner */
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+  }
+  S
+  /* Estilo do cabeçalho */
+  header {
+    background: var(--primary-color); /* Cor de fundo do cabeçalho */
+    padding: 20px 0;
+    border-bottom: 3px solid var(--border-color); /* Borda inferior do cabeçalho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra no cabeçalho */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 88888878px;
+
+gap: 50px;
+  }
+  
+  /* Estilo do título principal */
+  h1 {
+    font-size: 2.5em;
+    color: var(--secondary-color); /* Cor do título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra no texto do título */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo do formulário de agendamento */
+  .booking-form {
+    background: linear-gradient(135deg, var(--primary-color), var(--highlight-color)); /* Gradiente de fundo */
+    padding: 30px;
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-top: 20px;
+    border: 2px solid var(--border-color); /* Borda ao redor do formulário */
+    box-shadow: 5px 5px 0 var(--border-color); /* Sombra no formulário */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Estilo dos grupos de campos no formulário */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo dos rótulos dos campos do formulário */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--secondary-color); /* Cor do rótulo */
+  }
+  
+  /* Estilo dos campos de entrada de texto, e-mail, telefone, data, textarea e select */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select {
+    width: 100%; /* Largura total */
+    padding: 10px;
+    border: 2px solid var(--border-color); /* Borda dos campos */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1em;
+    background-color: var(--bg-color); /* Cor de fundo dos campos */
+    color: var(--text-color); /* Cor do texto */
+    transition: border-color 0.3s ease; /* Transição suave na borda */
+  }
+  
+  /* Estilo dos campos quando estão em foco */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  input[type="date"]:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: var(--accent-color); /* Cor da borda em foco */
+  }
+  
+  /* Estilo do campo textarea */
+  textarea {
+    resize: vertical; /* Permite redimensionamento vertical */
+    min-height: 100px; /* Altura mínima */
+  }
+  
+  /* Estilo do botão de envio */
+  .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color)); /* Gradiente de fundo */
+    color: var(--bg-color); /* Cor do texto */
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    border: 2px solid var(--border-color); /* Borda do botão */
+    box-shadow: 3px 3px 0 var(--secondary-color); /* Sombra do botão */
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer; /* Muda o cursor para ponteiro */
+  }
+  
+  /* Efeito ao passar o mouse sobre o botão */
+  .btn:hover {
+    transform: translateY(-2px); /* Eleva o botão */
+    box-shadow: 5px 5px 0 var(--secondary-color); /* Aumenta a sombra */
+  }
+  
+  /* Estilo da seção de anamnese */
+  .anamnesis {
+    margin-top: 30px;
+    background: var(--bg-color); /* Cor de fundo */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 2px solid var(--border-color); /* Borda */
+  }
+  
+  /* Estilo do título da seção de anamnese */
+  .anamnesis h2 {
+    color: var(--secondary-color); /* Cor do título */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Estilo do grupo de checkboxes */
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /* Quebra as opções em linhas */
+    gap: 10px; /* Espaçamento entre os checkboxes */
+  }
+  
+  /* Estilo individual dos itens de checkbox */
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Espaçamento entre o checkbox e o rótulo */
+  .checkbox-item input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Estilos responsivos para telas menores */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%; /* Aumenta a largura do contêiner */
+    }
+  
+    h1 {
+      font-size: 2em; /* Reduz o tamanho do título */
+    }
+  
+    .btn {
+      width: 100%; /* Botão ocupa toda a largura */
+      text-align: center; /* Alinha o texto ao centro */
+    }
+  }
+  

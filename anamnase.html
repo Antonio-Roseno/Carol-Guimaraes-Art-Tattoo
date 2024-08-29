@@ -1,0 +1,239 @@
+
+<html><head><base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carol Guimarães - Art Tattoo - Agendamento</title>
+  <link rel="stylesheet" href="anamnase.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <!-- Cabeçalho do site -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="img/perfi1.jpg"Carol Guimarães - Art Tattoo Logo">
+          </div>
+          <div class="nav-links">
+            <a href="#home">Início</a>
+            <a href="#services">Serviços</a>
+            <a href="galeria.html">Galeria</a>
+           
+            <a href="contato.html">Contato</a>
+          </div>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Carol Guimarães - Art Tattoo</h1>
+        <p>Transformando suas ideias em arte permanente na sua pele</p>
+        <a href="#booking" class="btn">Agende Sua Sessão</a>
+      </div>
+    </section>
+    <!-- Container principal para o formulário de agendamento -->
+    <div class="container">
+      <!-- Formulário de agendamento -->
+      <form class="booking-form" id="bookingForm">
+        <!-- Campo para nome completo -->
+        <div class="form-group">
+          <label for="name">Nome Completo:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+  
+        <!-- Campo para e-mail -->
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+  
+        <!-- Campo para telefone -->
+        <div class="form-group">
+          <label for="phone">Telefone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+  
+        <!-- Campo para data de nascimento -->
+        <div class="form-group">
+          <label for="birthdate">Data de Nascimento:</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+  
+        <!-- Campo para descrição da tatuagem desejada -->
+        <div class="form-group">
+          <label for="tattooDescription">Descrição da Tatuagem Desejada:</label>
+          <textarea id="tattooDescription" name="tattooDescription" required></textarea>
+        </div>
+  
+        <!-- Campo para tamanho aproximado da tatuagem -->
+        <div class="form-group">
+          <label for="tattooSize">Tamanho Aproximado (em cm):</label>
+          <input type="text" id="tattooSize" name="tattooSize" required>
+        </div>
+  
+        <!-- Campo para parte do corpo onde a tatuagem será feita -->
+        <div class="form-group">
+          <label for="bodyPart">Parte do Corpo:</label>
+          <input type="text" id="bodyPart" name="bodyPart" required>
+        </div>
+  
+        <!-- Campo para data preferencial do agendamento -->
+        <div class="form-group">
+          <label for="preferredDate">Data Preferencial:</label>
+          <input type="date" id="preferredDate" name="preferredDate" required>
+        </div>
+  
+        <!-- Seção de anamnese (histórico médico) -->
+        <div class="anamnesis">
+          <h2>Ficha de Anamnese</h2>
+  
+          <!-- Checkbox para condições médicas -->
+          <div class="form-group">
+            <label>Você tem alguma das seguintes condições?</label>
+            <div class="checkbox-group">
+              <!-- Opção para Diabetes -->
+              <div class="checkbox-item">
+                <input type="checkbox" id="diabetes" name="conditions[]" value="diabetes">
+                <label for="diabetes">Diabetes</label>
+              </div>
+              <!-- Opção para Hipertensão -->
+              <div class="checkbox-item">
+                <input type="checkbox" id="hypertension" name="conditions[]" value="hypertension">
+                <label for="hypertension">Hipertensão</label>
+              </div>
+              <!-- Opção para Hemofilia -->
+              <div class="checkbox-item">
+                <input type="checkbox" id="hemophilia" name="conditions[]" value="hemophilia">
+                <label for="hemophilia">Hemofilia</label>
+              </div>
+              <!-- Opção para Hepatite -->
+              <div class="checkbox-item">
+                <input type="checkbox" id="hepatitis" name="conditions[]" value="hepatitis">
+                <label for="hepatitis">Hepatite</label>
+              </div>
+              <!-- Opção para HIV -->
+              <div class="checkbox-item">
+                <input type="checkbox" id="hiv" name="conditions[]" value="hiv">
+                <label for="hiv">HIV</label>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Campo para alergias (opcional) -->
+          <div class="form-group">
+            <label for="allergies">Alergias (se houver):</label>
+            <input type="text" id="allergies" name="allergies">
+          </div>
+  
+          <!-- Campo para medicamentos em uso (opcional) -->
+          <div class="form-group">
+            <label for="medications">Medicamentos em uso:</label>
+            <input type="text" id="medications" name="medications">
+          </div>
+  
+          <!-- Checkbox para gravidez/amamentação -->
+          <div class="form-group">
+            <label>Você está grávida ou amamentando?</label>
+            <div class="checkbox-group">
+              <!-- Opção para Sim -->
+              <div class="checkbox-item">
+                <input type="checkbox" id="pregnant" name="pregnant" value="yes">
+                <label for="pregnant">Sim</label>
+              </div>
+              <!-- Opção para Não -->
+              <div class="checkbox-item">
+                <input type="checkbox" id="notPregnant" name="pregnant" value="no">
+                <label for="notPregnant">Não</label>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Campo para condições de pele (opcional) -->
+          <div class="form-group">
+            <label for="skinConditions">Condições de pele (ex: psoríase, eczema):</label>
+            <input type="text" id="skinConditions" name="skinConditions">
+          </div>
+  
+          <!-- Seleção de sensibilidade da pele -->
+          <div class="form-group">
+            <label for="skin_sensitivity">Sensibilidade da Pele:</label>
+            <select id="skin_sensitivity" name="skin_sensitivity">
+              <option value="">Selecione</option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+            </select>
+          </div>
+  
+          <!-- Seleção para bronzeamento recente -->
+          <div class="form-group">
+            <label for="bronzeamento">Fez bronzeamento nos últimos 7 dias?</label>
+            <select id="skin_bronzeamento" name="skin_bronzeamento">
+              <option value="">Selecione</option>
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
+            </select>
+          </div>
+  
+          <!-- Campo para informações adicionais relevantes (opcional) -->
+          <div class="form-group">
+            <label for="additionalInfo">Informações adicionais relevantes:</label>
+            <textarea id="additionalInfo" name="additionalInfo"></textarea>
+          </div>
+        </div>
+  
+        <!-- Botão de submissão do formulário -->
+        <button type="submit" class="btn">Solicitar Agendamento</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="img/perfi1.jpg" alt="Carol Guimarães - Art Tattoo Logo">
+          </div>
+          <div class="footer-social-links">
+            <!-- Link para o Instagram -->
+            <a href="https://www.instagram.com/carolguimaraes.tattoo" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+              <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram">
+            </a>
+            <!-- Link para o WhatsApp -->
+            <a href="https://wa.me/message/WNTNZP4JXPSGA1" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+              <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+                      <!-- JAVA SCRIPT  -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('bookingForm');
+  
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+  
+          // Aqui você pode adicionar a lógica para enviar os dados do formulário
+          // Para este exemplo, vamos apenas exibir uma mensagem de confirmação
+          alert('Obrigado! Sua solicitação de agendamento foi recebida. Entraremos em contato em breve para confirmar os detalhes.');
+  
+          // Limpar o formulário após o envio
+          form.reset();
+        });
+      });
+    </script>
+  </body></html>
