@@ -15,7 +15,7 @@
 
 /* Container da galeria, centraliza o conteúdo e adiciona espaçamento */
 .gallery {
-    padding: 5px 0; /* Espaçamento superior e inferior de 50px */
+    padding: 100 0; /* Espaçamento superior e inferior de 50px */
     text-align: center; /* Centraliza o texto */
     position: relative; /* Permite o uso de posicionamento absoluto para elementos filhos */
   }

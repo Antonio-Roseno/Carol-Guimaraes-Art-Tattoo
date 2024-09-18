@@ -1,11 +1,11 @@
 :root {
         --primary-color: #f8e5e5;
-        --secondary-color: #3a3a3a;
-        --accent-color: #d4a5a5;
+        --secondary-color: #908a8a;
+        --accent-color: #e7c2c2;
         --text-color: #333;
         --bg-color: #ffffff;
-        --border-color: #b68e8e;
-        --highlight-color: #f1d4d4;
+        --border-color: #eab9b9;
+        --highlight-color: #ece1e1;
         --facebook-color: #1877F2;
         --instagram-color: #E4405F;
         --whatsapp-color: #25D366;
@@ -83,7 +83,50 @@
             height: 3px;
             background: linear-gradient(to right, var(--border-color), var(--highlight-color), var(--border-color));
           }
-          
+          /* Estilos para a foto de perfil e descrição */
+.profile-content {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+.contact-links {
+  margin-top: 20px;
+}
+
+.contact-link {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-link i {
+  margin-right: 10px;
+}
+
+.contact-link:hover {
+  color: #000;
+}
+
           header::before {
             /* Posição do gradiente superior */
             top: 0;
@@ -296,6 +339,7 @@
         height: 150px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M30,15 Q60,0 90,15 T120,45 Q135,75 120,105 T90,135 Q60,150 30,135 T0,105 Q-15,75 0,45 T30,15' fill='none' stroke='%23d4a5a5' stroke-width='1'/%3E%3C/svg%3E");
         opacity: 0.3;
+        
       }
     
       footer::before {
@@ -313,7 +357,7 @@
       footer p {
         font-size: 1.2em;
         letter-spacing: 1px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        text-shadow: 1px 1px 2px rgba(21, 20, 20, 0.2);
       }
     
       @media (min-width: 768px) {
@@ -329,3 +373,62 @@
           font-size: 3.5em;
         }
       }
+
+      .profile {
+        padding: 7rem 0 4rem;
+        background: linear-gradient(135deg, var(--primary-color), var(--highlight-color));
+    }
+
+    .profile-content {
+        text-align: center;
+        border: 2px solid var(--accent-color);
+        border-radius: 10px;
+        padding: 2rem;
+        position: relative;
+        background: linear-gradient(135deg, var(--primary-color), var(--highlight-color));
+    }
+
+    .profile-content::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border: 1px solid var(--border-color);
+        border-radius: 15px;
+        z-index: -1;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        animation: pulse 2s infinite;
+    }
+
+    .profile-pic:hover {
+        transform: scale(1.05);
+    }
+
+    h1, h2, h3 {
+        font-family: 'Cinzel', serif;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        margin: 1rem 0;
+    }
+
+    .profile p {
+        max-width: 600px;
+        margin: 1rem auto;
+        font-size: 1.1rem;
+    }
+
+        
