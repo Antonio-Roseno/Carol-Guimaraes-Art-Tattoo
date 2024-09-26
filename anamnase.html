@@ -1,5 +1,5 @@
 
-<html><head><base href="/">
+<html><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carol Guimarães - Art Tattoo - Agendamento</title>
@@ -18,10 +18,9 @@
             <img src="img/perfi1.jpg"Carol Guimarães - Art Tattoo Logo">
           </div>
           <div class="nav-links">
-            <a href="#home">Início</a>
-            <a href="#services">Serviços</a>
+            <a href="index.html">Início</a>
+            <a href="anamnase.html">Anamnase</a>
             <a href="galeria.html">Galeria</a>
-           
             <a href="contato.html">Contato</a>
           </div>
           <div class="burger">
@@ -39,10 +38,13 @@
         <a href="#booking" class="btn">Agende Sua Sessão</a>
       </div>
     </section>
+    
     <!-- Container principal para o formulário de agendamento -->
     <div class="container">
       <!-- Formulário de agendamento -->
-      <form class="booking-form" id="bookingForm">
+      <div class="containe">
+        <!-- Formulário de agendamento -->
+        <form class="booking-form" id="bookingForm" action="processar_agendamento.php" method="POST">
         <!-- Campo para nome completo -->
         <div class="form-group">
           <label for="name">Nome Completo:</label>

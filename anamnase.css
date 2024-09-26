@@ -14,6 +14,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    padding: 0;
   }
   
   /* Estilo do corpo da página */
@@ -26,15 +27,7 @@
     background-size: 100px 100px; /* Tamanho do padrão de fundo */
   }
   
-  /* Estilo do contêiner principal */
-  .container {
-    width: 90%;
-    max-width: 100px; /* Largura máxima do contêiner */
-    margin: 50px auto;
-    padding: 20px;
-    position: relative;
-  }
-  S
+  
   /* Estilo do cabeçalho */
   header {
     background: var(--primary-color); /* Cor de fundo do cabeçalho */
