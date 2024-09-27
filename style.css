@@ -192,7 +192,8 @@ nav {
   position: relative;
   border: 15px solid var(--bg-color);
   box-shadow: 0 0 0 5px var(--border-color), 0 0 0 10px var(--highlight-color), 0 0 0 15px var(--border-color);
-  margin:  80px 30px  0;
+  margin:  80px 30px  30px;
+  margin-top: 150px;
   
 }
 
@@ -223,10 +224,11 @@ nav {
 .hero h1 {
   /* Estilo do título principal na seção hero */
 
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
+  color: #ffffff;
 }
 
 .hero p {
@@ -645,7 +647,6 @@ footer {
 
 /* Adiciona efeito media query, dimensao de tela*/
 
-
 @media screen and (min-width: 769px) {
   nav {
     justify-content: center;
@@ -675,5 +676,10 @@ footer {
 
   .overlay {
     display: none !important;
+  }
+
+  .hero h1 {
+    /* Estilo do título principal na seção hero */
+    font-size: 3em; /* Corrigido para valor válido */
   }
 }

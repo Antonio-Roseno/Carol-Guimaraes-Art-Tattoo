@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <!-- Define a codificação de caracteres para UTF-8 -->
@@ -58,97 +55,119 @@
     <!-- Importa o arquivo de estilo personalizado -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="contato.css">
+    
 </head>
 
-
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">
-          <img src="img/perfi1.jpg" alt="Carol Guimarães - Art Tattoo Logo"> <!-- Imagem do logo da empresa -->
-        </div>
-        <div class="nav-links">
-          <!-- Links de navegação -->
-          <a href="index.html">Início</a>
-          <a href="index.html">Serviços</a>
-          <a href="galeria.html">Galeria</a>
-        </div>
-        <div class="burger">
-          <!-- Ícone do menu hambúrguer para dispositivos móveis -->
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </div>
-  </header>
+    <!-- Conteúdo do corpo da página -->
+</body>
+</html>
 
-  <section id="home" class="profile">
-    <div class="container">
-        <div style="width: 100%; height: 20px; margin-bottom: 20px;">
-            <svg width="100%" height="20">
-                <rect width="100%" height="20" fill="url(#greek-key)"/>
-            </svg>
-        </div>
-        <div class="profile-content" data-aos="fade-up">
-            <img src="https://websim.creativevisions.com/carol-tattoo/img/profile-pic.jpg" alt="Carol Guimarães" class="profile-pic">
-            <h2 class="slide-in-left">Carol Guimarães</h2>
-            <p class="fade-in">Tatuadora com 4 anos de experiência, especializada em atender mulheres que buscam tatuagens íntimas, com foco na segurança, privacidade e organização. Minha paixão é criar arte única que reflete a personalidade de cada cliente.</p>
+   <!-- Cabeçalho do site -->
+<header>
+  <div class="container">
+    <!-- Navegação principal -->
+    <nav>
+      <!-- Logo do site -->
+      <div class="logo">
+        <img src="img/perfi1.jpg" alt="Carol Guimarães - Art Tattoo Logo">
+      </div>
+      <!-- Links de navegação -->
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="anamnase.html">Anamnase</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <!-- Menu hamburguer (para dispositivos móveis) -->
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </div>
+</header>
 
-            <div class="contact-links">
-                <a href="https://wa.me/message/WNTNZP4JXPSGA1" target="_blank" rel="noopener noreferrer" class="contact-link slide-in-left">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://www.instagram.com/carolguimaraes.tattoo?igsh=cDFlamE0aGU2aDVu" target="_blank" rel="noopener noreferrer" class="contact-link slide-in-right">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-            </div>
-        </div>
-    </div>
+<!-- Seção principal (Hero) -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <!-- Título e descrição principal -->
+    <h1>Carol Guimarães - Art Tattoo</h1>
+    <p>Transformando suas ideias em arte permanente na sua pele</p>
+    <!-- Botão de chamada para ação -->
+    <a href="contato.html" class="btn">Agende Sua Sessão</a>
+  </div>
 </section>
 
-  
-  <footer>
-    <div class="container">
-      <p>© 2024 Carol Guimarães - Art Tattoo. Todos os direitos reservados.</p> <!-- Informações de copyright -->
-    </div>
-  </footer>
-</body>
+</head>
+<body>
+    <section class="contato-section">
+    <div class="contato-hero">
+    
+        
+          <div class="contato-background"></div>
+          <div class="contato-border"></div>
+          <div class="contato-content">
+            <div class="contato-pic-container contato-animate-scaleIn">
+              <img src="img/perfi1.jpg" alt="Carol Guimarães - Tatuadora talentosa e criativa" class="contato-pic">
+              <div class="contato-frame"></div>
+            </div>
+            <h1 class="contato-title contato-animate-fadeInUp contato-delay-1">Carol Guimarães</h1>
+            <p class="contato-subtitle contato-animate-fadeInUp contato-delay-2">Arte em Tatuagem</p>
+            <p class="contato-bio contato-animate-fadeInUp contato-delay-3">
+                Tatuadora com 4 anos de experiência, especializada em atender mulheres que buscam tatuagens íntimas, com foco na segurança, privacidade e organização. Minha paixão é criar arte única que reflete a personalidade de cada cliente.
+            </p>
+            <div class="contato-links contato-animate-fadeInUp contato-delay-4">
+              <a href="https://wa.me/message/WNTNZP4JXPSGA1" target="_blank" rel="noopener noreferrer" class="contato-link contato-animate-shimmer">
+                <i class="fab fa-whatsapp"></i> Inicie Sua Jornada
+              </a>
+              <a href="https://www.instagram.com/carolguimaraes.tattoo?igsh=cDFlamE0aGU2aDVu" target="_blank" rel="noopener noreferrer" class="contato-link contato-animate-shimmer">
+                <i class="fab fa-instagram"></i> Galeria de Inspirações
+              </a>
+            </div>
+    
+        </section>
+      </div>
+    
 
-  <!-- Inclusão do JavaScript -->
-  <script src="script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const burger = document.querySelector('.burger'); // Seleciona o ícone do menu
-      const nav = document.querySelector('.nav-links'); // Seleciona o menu de navegação
 
-      // Função para alternar a visibilidade do menu ao clicar no ícone
-      burger.addEventListener('click', function() {
-        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-      });
 
-      // Ajustar menu ao redimensionar a tela
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-          nav.style.display = 'flex'; // Exibe o menu como flexível em telas maiores
-        } else {
-          nav.style.display = 'none'; // Oculta o menu em telas menores
-        }
-      });
-
-      // Animação suave para os ícones sociais
-      const socialIcons = document.querySelectorAll('.social-icon');
-      socialIcons.forEach(icon => {
-        icon.addEventListener('mouseover', () => {
-          icon.style.transform = 'scale(1.1) rotate(5deg)'; // Amplia e rotaciona o ícone ao passar o mouse
+<!-- Inclusão do arquivo de script JavaScript -->
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
         });
-        icon.addEventListener('mouseout', () => {
-          icon.style.transform = 'scale(1) rotate(0deg)'; // Restaura o ícone ao remover o mouse
+      }, {
+        threshold: 0.1
+      });
+    
+      document.querySelectorAll('.contato-animate-fadeInUp, .contato-animate-scaleIn').forEach(el => {
+        el.style.animationPlayState = 'paused';
+        observer.observe(el);
+      });
+    
+      // Efeito parallax suave
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        document.querySelector('.contato-background').style.transform = `translateY(${scrollY * 0.3}px)`;
+      });
+    
+      // Efeito de hover nos links de contato
+      document.querySelectorAll('.contato-link').forEach(link => {
+        link.addEventListener('mouseover', () => {
+          link.style.animationPlayState = 'paused';
+        });
+        link.addEventListener('mouseout', () => {
+          link.style.animationPlayState = 'running';
         });
       });
     });
-  </script>
-</body>
+    </script>
 
-</html>
+</body></html>
