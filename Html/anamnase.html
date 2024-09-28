@@ -196,7 +196,7 @@
         <button type="submit" class="btn">Solicitar Agendamento</button>
       </form>
     </div>
-
+    <div id="confirmationMessage"></div>
     <footer>
       <div class="container">
         <div class="footer-content">
@@ -224,18 +224,36 @@
                       <!-- JAVA SCRIPT  -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('bookingForm');
-  
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-  
-          // Aqui você pode adicionar a lógica para enviar os dados do formulário
-          // Para este exemplo, vamos apenas exibir uma mensagem de confirmação
-          alert('Obrigado! Sua solicitação de agendamento foi recebida. Entraremos em contato em breve para confirmar os detalhes.');
-  
-          // Limpar o formulário após o envio
-          form.reset();
-        });
-      });
+  const form = document.getElementById('bookingForm');
+  const confirmationMessage = document.getElementById('confirmationMessage');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Capturar os dados do formulário
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const date = document.getElementById('date').value;
+
+    // Exibir os dados do formulário no elemento de confirmação
+    confirmationMessage.innerHTML = `
+      <h3>Obrigado, ${name}!</h3>
+      <p>Sua solicitação de agendamento foi recebida.</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Data do Agendamento:</strong> ${date}</p>
+      <p>Entraremos em contato em breve para confirmar os detalhes.</p>
+    `;
+
+    // Estilização básica (opcional)
+    confirmationMessage.style.padding = '10px';
+    confirmationMessage.style.border = '1px solid #ccc';
+    confirmationMessage.style.marginTop = '20px';
+    confirmationMessage.style.backgroundColor = '#f9f9f9';
+
+    // Limpar o formulário após o envio
+    form.reset();
+  });
+});
+
     </script>
   </body></html>
