@@ -5,6 +5,11 @@ $username = "root"; // Ajuste conforme necessário
 $password = "";     // Ajuste conforme necessário
 $dbname = "tatuagem";
 
+// Habilitando a exibição de erros para desenvolvimento (desativar em produção)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Conectando ao banco de dados
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -13,9 +18,9 @@ if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
 
-// Verificando se o formulário foi enviado
+// Verificando se o formulário foi enviado via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Captura dos dados do formulário
+    // Capturando os dados enviados via AJAX
     $nome_completo = $_POST['name'];
     $email = $_POST['email'];
     $telefone = $_POST['phone'];
@@ -28,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Condições médicas (checkbox múltiplo)
     $condicoes_medicas = isset($_POST['conditions']) ? implode(', ', $_POST['conditions']) : '';
 
-    // Outros campos opcionais
+    // Captura de campos opcionais
     $alergias = $_POST['allergies'] ?? '';
     $medicamentos = $_POST['medications'] ?? '';
     $gravida_amamentando = $_POST['pregnant'] ?? '';
@@ -37,25 +42,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bronzeamento = $_POST['skin_bronzeamento'] ?? '';
     $informacoes_adicionais = $_POST['additionalInfo'] ?? '';
 
-    // SQL para inserção dos dados
+    // SQL para inserção dos dados no banco de dados
     $sql = "INSERT INTO agendamentos (nome_completo, email, telefone, data_nascimento, descricao_tatuagem, tamanho_tatuagem, parte_corpo, data_preferencial, condicoes_medicas, alergias, medicamentos, gravida_amamentando, condicoes_pele, sensibilidade_pele, bronzeamento, informacoes_adicionais)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     // Preparando e vinculando os parâmetros para evitar SQL injection
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssssssssssssss", $nome_completo, $email, $telefone, $data_nascimento, $descricao_tatuagem, $tamanho_tatuagem, $parte_corpo, $data_preferencial, $condicoes_medicas, $alergias, $medicamentos, $gravida_amamentando, $condicoes_pele, $sensibilidade_pele, $bronzeamento, $informacoes_adicionais);
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("ssssssssssssssss", $nome_completo, $email, $telefone, $data_nascimento, $descricao_tatuagem, $tamanho_tatuagem, $parte_corpo, $data_preferencial, $condicoes_medicas, $alergias, $medicamentos, $gravida_amamentando, $condicoes_pele, $sensibilidade_pele, $bronzeamento, $informacoes_adicionais);
 
-    // Executando a query e verificando se foi bem-sucedida
-    if ($stmt->execute()) {
-        echo "Agendamento realizado com sucesso!";
+        // Executando a query e verificando se foi bem-sucedida
+        if ($stmt->execute()) {
+            echo "Agendamento realizado com sucesso!";
+        } else {
+            // Se houve erro na execução da query, exibe o erro
+            echo "Erro ao executar a query: " . $stmt->error;
+        }
+
+        // Fechando a conexão
+        $stmt->close();
     } else {
-        echo "Erro: " . $sql . "<br>" . $conn->error;
+        // Se houve erro ao preparar a query, exibe o erro
+        echo "Erro ao preparar a query: " . $conn->error;
     }
 
     // Fechando a conexão
-    $stmt->close();
     $conn->close();
 } else {
     echo "Método de requisição inválido.";
 }
-?>
+

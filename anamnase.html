@@ -1,10 +1,13 @@
 
-<html><head>
+<html>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carol Guimarães - Art Tattoo - Agendamento</title>
   <link rel="stylesheet" href="anamnase.css">
   <link rel="stylesheet" href="style.css">
+ 
+
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
   </head>
@@ -198,62 +201,41 @@
     </div>
     <div id="confirmationMessage"></div>
     <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="img/perfi1.jpg" alt="Carol Guimarães - Art Tattoo Logo">
-          </div>
-          <div class="footer-social-links">
-            <!-- Link para o Instagram -->
-            <a href="https://www.instagram.com/carolguimaraes.tattoo" target="_blank" rel="noopener noreferrer" class="footer-social-link">
-              <i class="fab fa-instagram"></i>
-              <span>Instagram</span>
-              <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram">
-            </a>
-            <!-- Link para o WhatsApp -->
-            <a href="https://wa.me/message/WNTNZP4JXPSGA1" target="_blank" rel="noopener noreferrer" class="footer-social-link">
-              <i class="fab fa-whatsapp"></i>
-              <span>WhatsApp</span>
-              <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
-            </a>
-          </div>
-        </div>
-      </div>
+      
     </footer>
     <script src="script.js"></script>
-                      <!-- JAVA SCRIPT  -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('bookingForm');
-  const confirmationMessage = document.getElementById('confirmationMessage');
+    const form = document.getElementById('bookingForm');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o envio tradicional do formulário
 
-    // Capturar os dados do formulário
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const date = document.getElementById('date').value;
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'processar_agendamento.php', true);
 
-    // Exibir os dados do formulário no elemento de confirmação
-    confirmationMessage.innerHTML = `
-      <h3>Obrigado, ${name}!</h3>
-      <p>Sua solicitação de agendamento foi recebida.</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Data do Agendamento:</strong> ${date}</p>
-      <p>Entraremos em contato em breve para confirmar os detalhes.</p>
-    `;
+        // Configura a função de callback para exibir mensagem de sucesso ou erro
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                if (xhr.responseText.includes("Erro")) {
+                    alert('Ocorreu um erro. Veja o console para mais detalhes.');
+                    console.log('Erro: ', xhr.responseText); // Exibe o erro no console
+                } else {
+                    alert('Obrigado! Sua solicitação de agendamento foi recebida.');
+                    form.reset(); // Limpa o formulário após o envio
+                }
+            } else {
+                alert('Erro na comunicação com o servidor. Status: ' + xhr.status);
+            }
+        };
 
-    // Estilização básica (opcional)
-    confirmationMessage.style.padding = '10px';
-    confirmationMessage.style.border = '1px solid #ccc';
-    confirmationMessage.style.marginTop = '20px';
-    confirmationMessage.style.backgroundColor = '#f9f9f9';
-
-    // Limpar o formulário após o envio
-    form.reset();
-  });
+        // Cria um objeto FormData com os dados do formulário
+        const formData = new FormData(form);
+        xhr.send(formData); // Envia os dados do formulário via AJAX
+    });
 });
 
     </script>
+  
+    
   </body></html>
