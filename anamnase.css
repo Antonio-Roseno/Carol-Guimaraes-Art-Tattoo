@@ -168,6 +168,9 @@ gap: 50px;
   .checkbox-item input[type="checkbox"] {
     margin-right: 5px;
   }
+  form{
+   margin-bottom: 250px;
+  }
   
   /* Estilos responsivos para telas menores */
   @media (max-width: 768px) {
