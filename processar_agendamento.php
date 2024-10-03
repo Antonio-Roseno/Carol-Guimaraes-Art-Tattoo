@@ -1,9 +1,11 @@
 <?php
 // Configurações do banco de dados
-$servername = "localhost";
-$username = "root"; // Ajuste conforme necessário
-$password = "";     // Ajuste conforme necessário
-$dbname = "tatuagem";
+$servername = "u103514327_banco de dados
+";
+$username = "u103514327_
+"; // Ajuste conforme necessário
+$password = "Netoduar2@";     // Ajuste conforme necessário
+$dbname = "u103514327_database";
 
 // Habilitando a exibição de erros para desenvolvimento (desativar em produção)
 ini_set('display_errors', 1);
