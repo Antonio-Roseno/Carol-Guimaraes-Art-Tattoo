@@ -1,11 +1,9 @@
 <?php
 // Configurações do banco de dados
-$servername = "u103514327_banco de dados
-";
-$username = "u103514327_
-"; // Ajuste conforme necessário
+$servername = "srv1660.hstgr.io";
+$username = "u103514327_Carolguimaraes"; // Ajuste conforme necessário 
 $password = "Netoduar2@";     // Ajuste conforme necessário
-$dbname = "u103514327_database";
+$dbname = "u103514327_tatuagem";
 
 // Habilitando a exibição de erros para desenvolvimento (desativar em produção)
 ini_set('display_errors', 1);
