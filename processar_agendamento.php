@@ -1,9 +1,9 @@
 <?php
 // Configurações do banco de dados
-$servername = "srv1660.hstgr.io";
-$username = "u103514327_Carolguimaraes"; // Ajuste conforme necessário 
-$password = "Netoduar2@";     // Ajuste conforme necessário
-$dbname = "u103514327_tatuagem";
+$servername = "localhost";
+$username = "root"; // Usuário padrão do XAMPP
+$password = ""; // Senha padrão do XAMPP é vazia
+$dbname = "tatuagem";
 
 // Habilitando a exibição de erros para desenvolvimento (desativar em produção)
 ini_set('display_errors', 1);
